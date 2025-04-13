@@ -1,0 +1,2 @@
+# Client-Controlled-Traffic-Light-System-with-Pedestrian-Priority
+This project simulates a traffic light system with a twist: Pedestrians can request a crossing via a client interface. The Raspberry Pi acts as the central controller, managing the sequence of traffic lights and temporarily adjusting the cycle to accommodate pedestrian crossing requests. (Communication between raspberry pi and computer is TCP) 
