@@ -1,0 +1,56 @@
+## 💻 Terminal Commands for Traffic Light Project
+
+### Raspberry Pi Setup
+```
+sudo apt update
+sudo apt install python3-rpi.gpio
+```
+
+### Creating the Server Script
+```
+nano server.py
+# Paste your server-side Python code
+# Press Ctrl + O, Enter to save
+# Press Ctrl + X to exit
+```
+
+### Running the Server
+```
+python3 server.py
+```
+
+### Finding Raspberry Pi IP Address
+```
+hostname -I
+```
+
+### Running Python Shell for Manual GPIO Testing
+```
+python3
+>>> import RPi.GPIO as GPIO
+>>> GPIO.setmode(GPIO.BCM)
+>>> GPIO.setup(17, GPIO.OUT)
+>>> GPIO.output(17, True)  # Red LED ON
+>>> GPIO.output(17, False) # Red LED OFF
+>>> GPIO.cleanup()
+>>> exit()
+```
+
+### Cleaning Up GPIO Pins (if stuck)
+```
+python3
+>>> import RPi.GPIO as GPIO
+>>> GPIO.cleanup()
+>>> exit()
+```
+
+### Running the Client Script on PC
+```
+python client.py
+```
+
+### Stopping the Server
+```
+Ctrl + C
+```
+
